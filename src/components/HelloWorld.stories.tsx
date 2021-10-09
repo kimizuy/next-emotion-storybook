@@ -1,3 +1,4 @@
+import { ComponentStory } from '@storybook/react'
 import { css } from '@emotion/react'
 import HelloWorld from './HelloWorld'
 
@@ -6,12 +7,15 @@ export default {
   component: HelloWorld,
 }
 
-const Template = () => {
-  return <HelloWorld color="red" propCss={style} />
+const Template: ComponentStory<typeof HelloWorld> = (prop) => {
+  return <HelloWorld {...prop} />
 }
 
-const style = css`
-  background-color: aliceblue;
-`
-
 export const Default = Template.bind({})
+
+Default.args = {
+  color: 'red',
+  propCss: css`
+    background-color: aquamarine;
+  `,
+}
