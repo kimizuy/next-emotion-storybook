@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -s public/",
+    "serve-storybook": "serve storybook-static",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged",
+    "typecheck": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,css,scss}": [
+      "yarn eslint --fix",
+      "yarn stylelint",
+      "yarn prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "next": "^11.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "reseter.css": "^2.0.0"
+  },
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.3.0",
+    "@storybook/addon-essentials": "^6.3.10",
+    "@storybook/addon-links": "^6.3.10",
+    "@storybook/react": "^6.3.10",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.1",
+    "prettier": "^2.4.0",
+    "serve": "12.0.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "typescript": "^4.4.3"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}
